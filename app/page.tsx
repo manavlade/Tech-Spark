@@ -33,6 +33,13 @@ import Footer from "@/components/Footer"
 import app from "@/assets/5467426_1720.jpg"
 import game from "@/assets/11667595_20945449.jpg";
 import Navbar from "@/components/Navbar"
+import contact from "@/assets/contact.jpg";
+import { Montserrat } from "next/font/google"
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 // Custom hook for intersection observer
 function useInView(options = {}) {
@@ -75,12 +82,37 @@ export default function TechspringWebsite() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-     <Navbar/>
+      <Navbar />
 
       <HomePage />
 
       {/* Stats Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 md:py-28 bg-white">
+        <div className="w-[80%] mx-auto flex justify-between items-center gap-8 py-10">
+          <div className="flex-1">
+            <p
+              className={`text-gray-500 text-sm md:text-lg lg:text-xl font-[600] text-justify ${montserrat.className}`}
+            >
+              TechSpring is a premier mobile app and game development studio. We transform innovative ideas into
+              powerful digital solutions that engage users and drive business growth. From concept to launch, we're
+              your trusted technology partner.
+            </p>
+            <div className="mt-6 flex justify-start">
+              <button
+                type="button"
+                className={`text-white flex gap-2 items-center font-medium bg-blue-600 hover:bg-blue-700 focus-within:ring-4 focus-within:ring-blue-800 border-blue-700 border-[1px] rounded-lg text-sm md:text-lg lg:text-3xl px-4 py-2 cursor-pointer ${montserrat.className}`}
+              >
+                Start Your Project
+                <ArrowRight />
+              </button>
+            </div>
+          </div>
+
+          <div className="flex-1 flex justify-end">
+            <Image src={contact} alt="Contact" width={560} height={560} className="max-w-full h-auto" />
+          </div>
+        </div>
+
         <div className="container px-6 md:px-8 max-w-6xl mx-auto">
           <div ref={statsRef} className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-center">
             <div
