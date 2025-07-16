@@ -88,7 +88,7 @@ export default function TechspringWebsite() {
 
       {/* Stats Section */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="w-[80%] mx-auto flex justify-between items-center gap-8 py-10">
+        <div className="w-[80%] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 py-10">
           <div className="flex-1">
             <p
               className={`text-gray-500 text-sm md:text-lg lg:text-xl font-[600] text-justify ${montserrat.className}`}
